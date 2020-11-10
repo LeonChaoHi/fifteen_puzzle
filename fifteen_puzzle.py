@@ -24,7 +24,7 @@ def puzz_astar(start,end):
         for k in moves(endnode):
             if k in close_list: continue
             # newpath = [path[0] + heuristic(k) - heuristic(endnode)] + path[1:] + [k] 
-            newpath = [heuristic(k) + 0.8 * len(path)] + path[1:] + [k] 
+            newpath = [heuristic(k) + 1 * len(path)] + path[1:] + [k] 
             open_list.append(newpath)
         close_list.append(endnode)
     print("Expanded nodes:", len(close_list))
